@@ -7,6 +7,16 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
+    {% include 'navbar.html' %}
+
+    {% if messages %}
+        <ul class="messages">
+            <li>
+                {{ message }}
+            </li>
+        </ul>
+    {% endif %}
+
     {% block content %}
 
     {% endblock %}
